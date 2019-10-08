@@ -17,6 +17,6 @@ from django.contrib import admin
 from django.urls import path, include
 
 urlpatterns = [
-    path('authorizationapi/', include('authorizationapi.urls')),
-    path('authorizationapi/admin/', admin.site.urls),
+    path('mqtt_access_control_api/', include('authorizationapi.urls')),
+    path('mqtt_access_control_api/admin/', admin.site.urls),
 ]

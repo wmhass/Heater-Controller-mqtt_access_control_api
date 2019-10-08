@@ -11,6 +11,6 @@ import os
 
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'mqttauthorization.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'mqtt_access_control_api.settings')
 
 application = get_wsgi_application()

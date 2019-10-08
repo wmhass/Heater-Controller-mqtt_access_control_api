@@ -2,7 +2,7 @@
 FROM python:3.7.4-alpine
 
 # set work directory
-WORKDIR /usr/src/mqttauthorization
+WORKDIR /usr/src/mqtt_access_control_api
 
 # set environment variables
 ENV PYTHONDONTWRITEBYTECODE 1
@@ -18,19 +18,19 @@ RUN apk update \
 # install dependencies
 RUN pip install --upgrade pip
 RUN pip install pipenv
-COPY ./Pipfile /usr/src/mqttauthorization/Pipfile
+COPY ./Pipfile /usr/src/mqtt_access_control_api/Pipfile
 RUN pipenv install --skip-lock --system --dev
 
 # copy entrypoint.sh
-COPY ./entrypoint.sh /usr/src/mqttauthorization/entrypoint.sh
+COPY ./entrypoint.sh /usr/src/mqtt_access_control_api/entrypoint.sh
 
 # copy project
-COPY . /usr/src/mqttauthorization/
+COPY . /usr/src/mqtt_access_control_api/
 
-RUN chmod +x /usr/src/mqttauthorization/entrypoint.sh
+RUN chmod +x /usr/src/mqtt_access_control_api/entrypoint.sh
 
 # run entrypoint.sh
-ENTRYPOINT ["/usr/src/mqttauthorization/entrypoint.sh"]
+ENTRYPOINT ["/usr/src/mqtt_access_control_api/entrypoint.sh"]
 
 EXPOSE 8001
 

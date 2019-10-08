@@ -51,7 +51,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'mqttauthorization.urls'
+ROOT_URLCONF = 'mqtt_access_control_api.urls'
 
 TEMPLATES = [
     {
@@ -69,7 +69,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'mqttauthorization.wsgi.application'
+WSGI_APPLICATION = 'mqtt_access_control_api.wsgi.application'
 
 
 # Database
@@ -122,6 +122,5 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
-
-STATIC_URL = os.environ.get('MQTTAUTHORIZATIONAPI_STATICFILES_URLPATH', default='/mqttauthorization_staticfiles/')
+STATIC_URL = os.environ.get('MQTT_ACCESS_CONTROL_STATIC_FILES_URL_PATH', default='/mqtt_access_control_api_static_files/')
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
