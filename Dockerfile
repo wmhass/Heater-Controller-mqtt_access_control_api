@@ -34,4 +34,4 @@ ENTRYPOINT ["/usr/src/mqtt_access_control_api/entrypoint.sh"]
 
 EXPOSE 8001
 
-CMD ["python", "manage.py", "runserver", "0.0.0.0:8001"]
+CMD ["python", "manage.py", "runserver", "0:8001"]

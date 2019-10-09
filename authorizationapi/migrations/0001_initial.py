@@ -29,12 +29,12 @@ class Migration(migrations.Migration):
         migrations.RunSQL("""
             INSERT INTO authorizationapi_mqttaccount(username, pw, superuser)
             VALUES
-            ('admin', 'PBKDF2$sha256$10000$59CmkTYlA/+4zy9m$t0WvH7vVotZp3wJVx+ZFMgADzIq7W5TD', 0)
+            ('admin', '21232f297a57a5a743894a0e4a801fc3', 0)
         """),
         migrations.RunSQL("""
             INSERT INTO authorizationapi_mqttaccount(username, pw, superuser)
             VALUES
-            ('admin2', 'PBKDF2$sha256$10000$59CmkTYlA/+4zy9m$t0WvH7vVotZp3wJVx+ZFMgADzIq7W5TD', 0)
+            ('admin2', '21232f297a57a5a743894a0e4a801fc3', 0)
         """),
         migrations.CreateModel(
             name='MqttAcl',
@@ -54,11 +54,11 @@ class Migration(migrations.Migration):
         migrations.RunSQL("""
             INSERT INTO authorizationapi_mqttacl(username, topic, rw)
             VALUES
-            ('admin', 'user/admin', 2)
+            ('admin', 'user/admin', 3)
         """),
         migrations.RunSQL("""
             INSERT INTO authorizationapi_mqttacl(username, topic, rw)
             VALUES
-            ('admin2', 'user/admin2', 2)
+            ('admin2', 'user/admin2', 3)
         """)
     ]
