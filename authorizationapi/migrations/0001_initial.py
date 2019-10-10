@@ -36,6 +36,16 @@ class Migration(migrations.Migration):
             VALUES
             ('admin2', '21232f297a57a5a743894a0e4a801fc3', 0)
         """),
+        migrations.RunSQL("""
+            INSERT INTO authorizationapi_mqttaccount(username, pw, superuser)
+            VALUES
+            ('mqtt_observer', '21232f297a57a5a743894a0e4a801fc3', 1)
+        """),
+        migrations.RunSQL("""
+            INSERT INTO authorizationapi_mqttaccount(username, pw, superuser)
+            VALUES
+            ('mqtt_http_api', '21232f297a57a5a743894a0e4a801fc3', 1)
+        """),
         migrations.CreateModel(
             name='MqttAcl',
             fields=[
