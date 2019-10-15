@@ -29,8 +29,6 @@ COPY ./entrypoint.sh /usr/src/mqtt_access_control_api/entrypoint.sh
 
 RUN chmod +x /usr/src/mqtt_access_control_api/entrypoint.sh
 
-RUN ls /usr/src/mqtt_access_control_api/
-
 # run entrypoint.sh
 ENTRYPOINT ["/usr/src/mqtt_access_control_api/entrypoint.sh"]
 
