@@ -21,13 +21,13 @@ RUN pip install pipenv
 COPY ./Pipfile /usr/src/mqtt_access_control_api/Pipfile
 RUN pipenv install --skip-lock --system --dev
 
-# copy entrypoint.sh
-COPY ./entrypoint.sh /usr/src/mqtt_access_control_api/entrypoint.sh
-
 RUN ls /usr/src/mqtt_access_control_api/
 
 # copy project
 COPY . /usr/src/mqtt_access_control_api/
+
+# copy entrypoint.sh
+COPY ./entrypoint.sh /usr/src/mqtt_access_control_api/entrypoint.sh
 
 RUN chmod +x /usr/src/mqtt_access_control_api/entrypoint.sh
 
